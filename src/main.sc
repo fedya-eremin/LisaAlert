@@ -19,14 +19,14 @@ theme: /
         a: Вот ваш кот. Видели этого человека?
         go!: Matched
 
-    state: Matched
-        state: Yes
-            eg!: matched
-            a: Хорошо. Сообщю, что Вы видели этого человека
-        state: No
-            q: * нет *
-            a: Жаль... Далее
-            go!: /Start
+        state: Matched
+            state: Yes
+                eg!: matched
+                a: Хорошо. Сообщю, что Вы видели этого человека
+            state: No
+                q: * нет *
+                a: Жаль... Далее
+                go!: /Start
 
     
     state: GetPromoCode
