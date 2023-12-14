@@ -11,8 +11,8 @@ theme: /
             var url = "https://cataas.com/cat";
             $response.replies = $response.replies || [];
             $response.replies.push({
-              type: 'switch',
-              messageToUser: 'Хорошо, передаю ваш вопрос своим коллегам'
+              type: 'text',
+              messageToUser: url;
             });
             var res = $fetch.get(url);
             if (res.isOk) {
