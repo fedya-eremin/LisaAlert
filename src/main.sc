@@ -12,7 +12,7 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push({
               type: 'text',
-              messageToUser: url;
+              messageToUser: url
             });
             var res = $fetch.get(url);
             if (res.isOk) {
