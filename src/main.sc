@@ -7,10 +7,10 @@ theme: /
         eg!: start
         script:
             $smartProfile.getProfileData();
-            $response.replies = $response.replies || [];
+            $response.replies = [];
             $response.replies.push({
               type: 'image',
-              imageUrl: 'https://cataas.com/cat'
+              imageUrl: 'https://cataas.com/cat/says/Hello'
             });
 
         a: Вот ваш кот
