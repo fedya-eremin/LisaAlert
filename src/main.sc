@@ -9,6 +9,12 @@ theme: /
             $jsapi.log(123);
             $fetch.get("https://cataas.com/cat")
                 .then(function (res) {$temp.res = res})
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+              type: 'image',
+              imageUrl: 'https://cataas.com/cat'
+            });
+
         a: Вот: {{ $temp.res   }}
 
     
