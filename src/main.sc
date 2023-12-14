@@ -4,7 +4,7 @@ require: slotfilling/slotFilling.sc
 theme: /
     state: Приветствие
         q!: $regex</start>
-        intent!: /привет
+        intent!: /привет || toState=/Start
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Start
