@@ -14,6 +14,10 @@ theme: /
             });
 
         a: Вот ваш кот
+        
+        state: Matched
+            eg!: matched
+            а: Хорошо. Сообщю, что Вы видели этого человека
 
     
     state: GetPromoCode
