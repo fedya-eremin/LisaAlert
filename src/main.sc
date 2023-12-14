@@ -7,7 +7,8 @@ theme: /
         eg!: start
         script:
             $jsapi.log(123);
-        a: Вот: {{ $fetch.get("https://cataas.com/cat?json=true").isOk || true  }}
+            $temp.res = $fetch.get("https://cataas.com/cat?json=true")
+        a: Вот: {{ $temp.res.isOk   }}
 
     
     state: GetPromoCode
