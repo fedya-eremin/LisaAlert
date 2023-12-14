@@ -7,7 +7,7 @@ theme: /
         eg!: start
         script:
             $jsapi.log(123);
-            $fetch.get("https://cataas.com/cat?json=true")
+            $fetch.get("https://cataas.com/cat")
                 .then(function (res) {$temp.res = res})
         a: Вот: {{ $temp.res   }}
 
