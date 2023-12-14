@@ -2,10 +2,13 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
+    state: /
+        script:
 
     state: Start
         eg!: start
         script:
+            $smartProfile.getProfileData();
             $jsapi.log(123);
             $fetch.get("https://cataas.com/cat")
                 .then(function (res) {$temp.res = res})
@@ -15,7 +18,7 @@ theme: /
               imageUrl: 'https://cataas.com/cat'
             });
 
-        a: Вот: {{ $temp }}
+        a: Вот: {{ $request.data.eventData.profile_data.geo.reverseGeocoding.country; }}
 
     
     state: GetPromoCode
