@@ -15,7 +15,7 @@ theme: /
               imageUrl: 'https://cataas.com/cat'
             });
 
-        a: Вот: {{ $temp.res   }}
+        a: Вот: {{ $temp }}
 
     
     state: GetPromoCode
