@@ -2,7 +2,6 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-
     state: Start
         eg!: start
         script:
@@ -12,7 +11,6 @@ theme: /
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
-
         a: Вот ваш кот
         
     state: Matched
