@@ -10,6 +10,49 @@ sts:
 caila:
   noMatchThreshold: 0.2
 
+name: brain
+
+entryPoint:
+  - main.sc
+
+botEngine: v2
+language: ru
+sts:
+  noMatchThreshold: 0.2
+caila:
+  noMatchThreshold: 0.2
+
+nlp:                                    
+  morphology: default
+  tokenizer: default
+  vocabulary: common-vocabulary.json
+  lengthLimit:
+    enabled: true
+    symbols: 400
+    words: 100000
+  timeLimit:
+    enabled: true
+    timeout: 10000
+
+classifier:
+  enable: true
+  engine: sts
+  noMatchThreshold: 0.2
+  parameters:
+    algorithm: aligner2
+
+aligner:
+  vocabulary: common-vocabulary.json
+  
+exampleGroups:
+    - src/dictionaries/examples.json
+
+tests:
+  include:
+    - test.xml
+
+
+
 scriptsPreLoad:
   global:
     - /jslib/moment.min.js

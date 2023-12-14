@@ -1,57 +1,39 @@
 {
-  "project": {
-    "id": "brain",
-    "name": "brain",
-    "folder": "/"
+  "project" : {
+    "id" : "lisaalert-2453057-Ryo",
+    "name" : "lisaalert-2453057-Ryo",
+    "folder" : "/jaicp"
   },
-  "settings": {
-    "language": "ru",
-    "spellingCorrection": false,
-    "classificationAlgorithm": "sts",
-    "timezone": "Europe/Moscow",
-    "extendedSettings": {
-      "tokenizerEngine": "default"
-    }
-  },
-  "intents": [
-    {
-      "path": "/пока",
-      "description": null,
-      "answer": null,
-      "customData": null,
-      "enabled": true,
-      "phrases": [
-        {
-          "text": "пока",
-          "entities": null
-        }
-      ],
-      "patterns": null,
-      "slots": null
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "default"
     },
-    {
-      "path": "/привет",
-      "description": null,
-      "answer": null,
-      "customData": null,
-      "enabled": true,
-      "phrases": [
-        {
-          "text": "привет",
-          "entities": null
-        }
-      ],
-      "patterns": null,
-      "slots": null
-    }
-  ],
-  "entities": [],
-  "enabledSystemEntities": [
-    "duckling.number",
-    "duckling.time",
-    "duckling.duration",
-    "duckling.phone-number",
-    "duckling.email",
-    "duckling.url"
-  ]
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ {
+    "id" : 704890,
+    "path" : "/пока",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    } ]
+  }, {
+    "id" : 704891,
+    "path" : "/привет",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    } ]
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }
