@@ -25,8 +25,11 @@ theme: /
                 a: Хорошо. Сообщю, что Вы видели этого человека
             state: No
                 q: * нет *
-                a: Жаль... Далее
-                go!: /Start
+                a: Жаль...
+            go!: ..  #/AskContinue
+                
+
+    
 
     
     state: GetPromoCode
