@@ -8,5 +8,5 @@ theme: /
         eg!: start
         a: Вот, смотрите!
         script:
-            gerReferences()
+            getReferences()
 
