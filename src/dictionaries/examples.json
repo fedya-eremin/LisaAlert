@@ -15,7 +15,7 @@
         },
         {
             "id": "matched",
-            "path": "/Matched",
+            "path": "/Start/Matched",
             "description": "Фразы, если пользователь видел этого человека",
             "disabled": false,
             "phrases": [
