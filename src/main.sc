@@ -10,7 +10,7 @@ theme: /
             $response.replies = [];
             $response.replies.push({
               type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello'
+              imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
 
         a: Вот ваш кот
