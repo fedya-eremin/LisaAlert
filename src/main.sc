@@ -8,5 +8,5 @@ theme: /
         eg!: start
         script:
             var url = "https://cataas.com/cat";
-        a: Вот: {{ url }}
+        a: Вот: {{ $request }}
 
