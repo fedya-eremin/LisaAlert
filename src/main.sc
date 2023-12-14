@@ -7,7 +7,7 @@ theme: /
         intent!: /привет || toState=/Start
         a: Здравствуйте! Это - навык Лиза Алерт
         
-    state: Start
+    state: Start || modal = true
         eg!: start
         script:
             $smartProfile.getProfileData();
