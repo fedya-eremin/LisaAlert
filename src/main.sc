@@ -7,9 +7,6 @@ theme: /
         eg!: start
         script:
             $smartProfile.getProfileData();
-            $jsapi.log(123);
-            $fetch.get("https://cataas.com/cat")
-                .then(function (res) {$temp.res = res})
             $response.replies = $response.replies || [];
             $response.replies.push({
               type: 'image',
