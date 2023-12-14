@@ -7,7 +7,7 @@ theme: /
         eg!: start
         script:
             $jsapi.log(123);
-        a: Вот: {{ $request.query }}
+        a: Вот: {{ $fetch.get("https://cataas.com/cat?json=true") }}
 
     
     state: GetPromoCode
