@@ -15,6 +15,7 @@ theme: /
         
     state: Matched
         eg!: matched
+        intent!: /MatchedIntent
         a: Хорошо. Сообщю, что Вы видели этого человека
 
     

@@ -16,6 +16,21 @@
     "business" : false
   },
   "intents" : [ {
+    "id" : 703881,
+    "path" : "/MatchedIntent",
+    "description" : "говорит о том, видел ли пользователь человека в ориентировке\n",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Match",
+      "entity" : "duckling.number",
+      "required" : false,
+      "prompts" : [ "Видели?" ]
+    } ]
+  }, {
     "id" : 704890,
     "path" : "/пока",
     "enabled" : true,
