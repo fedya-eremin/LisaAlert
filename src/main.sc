@@ -7,6 +7,6 @@ theme: /
     state: Start
         eg!: start
         script:
-            log(123);
+            $jsapi.log(123);
         a: Вот: {{ $request.query }}
 
