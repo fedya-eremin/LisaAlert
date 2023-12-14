@@ -7,10 +7,6 @@ theme: /
     state: Start
         eg!: start
         script:
-            var url = "https://cataas.com/cat?json=true";
-            var res = $fetch.get(url);
-            if (res.isOk) {
-                $ans = res.data.size;
-            }
-        a: Вот: {{ $ans }}
+            log(123);
+        a: Вот: {{ $request.query }}
 
