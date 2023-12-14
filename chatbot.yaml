@@ -35,11 +35,6 @@ aligner:
 exampleGroups:
     - src/dictionaries/examples.json
 
-tests:
-  include:
-    - test.xml
-
-
 
 scriptsPreLoad:
   global:
