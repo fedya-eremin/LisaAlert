@@ -16,7 +16,7 @@ theme: /
               imageUrl: 'https://cataas.com/cat'
             });
 
-        a: Вот: {{ $smartProfile.getProfileData() }}
+        a: Вот ваш кот
 
     
     state: GetPromoCode
