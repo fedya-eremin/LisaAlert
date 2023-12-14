@@ -16,12 +16,17 @@ theme: /
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
-        a: Вот ваш кот
+        a: Вот ваш кот. Видели этого человека?
+        go!: /Start/Matched
         
-    state: Matched
-        eg!: matched
-        intent: /MatchedIntent || fromState=/Start, onlyThisState = true
-        a: Хорошо. Сообщю, что Вы видели этого человека
+            state: Matched
+                state: Yes
+                    eg!: matched
+                    a: Хорошо. Сообщю, что Вы видели этого человека
+                state: No
+                    q: * нет *
+                    a: Жаль... Далее
+                    go!: /Start
 
     
     state: GetPromoCode
