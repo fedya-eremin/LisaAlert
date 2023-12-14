@@ -15,7 +15,7 @@ theme: /
         
     state: Matched
         eg!: matched
-        а: Хорошо. Сообщю, что Вы видели этого человека
+        a: Хорошо. Сообщю, что Вы видели этого человека
 
     
     state: GetPromoCode
