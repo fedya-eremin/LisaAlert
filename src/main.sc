@@ -9,7 +9,7 @@ theme: /
         a: Вот, смотрите!
         script:
             var url = "https://cataas.com/cat";
-            $jsapi.log("123456");
+            log("123456");
             var res = $fetch.get(url);
             if (res.isOk) {
                 $jsapi.log(res);
