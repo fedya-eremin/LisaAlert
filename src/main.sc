@@ -15,7 +15,7 @@ theme: /
         
     state: Matched
         eg!: matched
-        intent: /MatchedIntent
+        intent: /MatchedIntent || fromState=/Start, onlyThisState = true
         a: Хорошо. Сообщю, что Вы видели этого человека
 
     
