@@ -8,5 +8,9 @@ theme: /
         eg!: start
         a: Вот, смотрите!
         script:
-            getReferences()
+            var url = "https://cataas.com/cat";
+            var res = $fetch.get(url);
+            if (res.isOk) {
+                $log(res);
+            }
 
