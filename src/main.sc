@@ -16,7 +16,7 @@ theme: /
               imageUrl: 'https://cataas.com/cat'
             });
 
-        a: Вот: {{ $request.data.eventData.profile_data.geo.reverseGeocoding.country; }}
+        a: Вот: {{ $smartProfile.getProfileData() }}
 
     
     state: GetPromoCode
