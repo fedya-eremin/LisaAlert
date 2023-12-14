@@ -9,7 +9,11 @@ theme: /
         a: Вот, смотрите!
         script:
             var url = "https://cataas.com/cat";
-            log("123456");
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+              type: 'switch',
+              messageToUser: 'Хорошо, передаю ваш вопрос своим коллегам'
+            });
             var res = $fetch.get(url);
             if (res.isOk) {
                 $jsapi.log(res);
