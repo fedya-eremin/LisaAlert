@@ -7,6 +7,6 @@ theme: /
     state: Start
         eg!: start
         script:
-            $url = "https://cataas.com/cat";
+            var url = "https://cataas.com/cat";
         a: Вот: {{ $url }}
 
