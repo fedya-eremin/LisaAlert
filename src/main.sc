@@ -2,8 +2,6 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-    state: /
-        script:
 
     state: Start
         eg!: start
