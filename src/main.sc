@@ -8,7 +8,7 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Start
-        # eg!: start
+        eg!: start
         script:
             $smartProfile.getProfileData();
             log(123);
