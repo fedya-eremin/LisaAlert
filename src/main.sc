@@ -2,7 +2,7 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-    state: Приветствие
+    state: Greeting
         q!: $regex</start>
         intent: /привет
         a: Здравствуйте! Это - навык Лиза Алерт!
@@ -44,4 +44,5 @@ theme: /
         
         state: LocalCatchAll
             event: noMatch
+            intent: /пока || toState = /Greeting
             a: Хорошо, до свидания!
