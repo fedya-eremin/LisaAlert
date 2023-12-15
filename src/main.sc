@@ -2,7 +2,7 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-    state: Приветствие || noContext = true
+    state: Приветствие
         q!: *
         intent!: /привет || toState=/Prepare
         a: Здравствуйте! Это - навык Лиза Алерт
