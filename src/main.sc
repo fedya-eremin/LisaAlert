@@ -25,6 +25,8 @@ theme: /
         state: Seen
             q: *
             a: Хорошо. Сообщю, что Вы видели этого человека. [{{ $request.query }}]
+            script:
+                $mail.sendMessage("henry_morgan06@mail.ru", "message subject", "message body");
             go!: /ShowMore
         
         state: NotSeen
