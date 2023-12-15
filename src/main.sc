@@ -12,7 +12,6 @@ theme: /
         go!: /Start
         
     state: Start || modal = true
-        q: *
         script:
             $smartProfile.getProfileData();
             $jsapi.log("123");
