@@ -11,6 +11,7 @@ theme: /
         eg!: start
         script:
             $smartProfile.getProfileData();
+            log(123);
             $response.replies = [];
             $response.replies.push({
               type: 'image',
