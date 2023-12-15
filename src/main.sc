@@ -18,7 +18,6 @@ theme: /
               imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
         a: Вот ваш кот. Видели этого человека?
-        go!: /AskContinueYes
 
         state: Matched
             state: Yes
