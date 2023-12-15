@@ -20,10 +20,11 @@ theme: /
     state: Start || modal = true
         script:
             $session.people = $session.people || [];
-
+            if ($session.people.length === 100) {
+                $session.people = [];
+            }
             var coord = 1;
             log($session)
-            $response.replies.push(getProperties($session.people));
             $session.people.push(coord)
             $jsapi.log(123);
             $response.replies = $response.replies || [];
