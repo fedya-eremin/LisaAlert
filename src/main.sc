@@ -10,7 +10,6 @@ theme: /
         
     state: Prepare
         intent: /SearchIntent
-        go!: /Start
 
     state: Start || modal = true
         script:
@@ -42,4 +41,5 @@ theme: /
         state: LocalCatchAll
             event: noMatch
             a: Хорошо, до свидания!
+            go!: /Приветствие
         
