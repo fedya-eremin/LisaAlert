@@ -35,6 +35,13 @@ aligner:
 exampleGroups:
     - src/dictionaries/examples.json
 
+injector:
+    smtp:
+        host: smtp.mail.ru
+        port: 465
+        from: henry_morgan06@mail.ru
+        user: sber
+        password: Ux4uNUT74Y8GfcmQQxrn
 
 scriptsPreLoad:
   global:

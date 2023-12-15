@@ -24,7 +24,7 @@ theme: /
 
         state: Seen
             q: *
-            a: Хорошо. Сообщю, что Вы видели этого человека. {{ $request.query }}
+            a: Хорошо. Сообщю, что Вы видели этого человека. [{{ $request.query }}]
             go!: /ShowMore
         
         state: NotSeen
