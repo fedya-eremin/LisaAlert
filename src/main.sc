@@ -28,10 +28,9 @@ theme: /
             while ($session.people.indexOf(coord) === -1) {
                 coord = $jsapi.random(100)
             }
-            log($session)
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify($session.people)
+                text: JSON.stringify($session.people.indexOf(coord))
             });
             $session.people.push(coord)
             $jsapi.log(123);
