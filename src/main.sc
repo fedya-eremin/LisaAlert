@@ -26,7 +26,7 @@ theme: /
             }
             var coord = 1;
             while ($session.people.indexOf(coord) === -1) {
-                coord = $jsapi.random(100)
+                coord = 52
             }
             $response.replies.push({
                 type: 'text',
