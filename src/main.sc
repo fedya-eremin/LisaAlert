@@ -28,11 +28,11 @@ theme: /
             while ($session.people.indexOf(coord) !== -1) {
                 var coord = 3;
             }
+            $session.people.push(coord)
             $response.replies.push({
                 type: 'text',
                 text: JSON.stringify($session.people)
             });
-            $session.people.push(coord)
             $jsapi.log(123);
             $response.replies.push({
               type: 'image',
