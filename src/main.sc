@@ -19,7 +19,7 @@ theme: /
             $response.replies = [];
             $response.replies.push({
               type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello' #+ $jsapi.random(100)
+              imageUrl: 'https://cataas.com/cat/says/Hello' 
             });
         a: Вот ваш кот. Видели этого человека?
 
