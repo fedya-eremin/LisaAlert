@@ -27,7 +27,7 @@ theme: /
             state: No
                 q: * нет *
                 a: Жаль...
-            go!: /AskContinue 
+            go!: /Start
             # TODO сделать это нормально
                 
     state: AskContinue
