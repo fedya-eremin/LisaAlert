@@ -8,7 +8,7 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Start
-        intent!: /SearchIntent || toState = Matched
+        intent!: /SearchIntent 
         script:
             $smartProfile.getProfileData();
             log(123);
