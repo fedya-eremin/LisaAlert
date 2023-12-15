@@ -25,13 +25,11 @@ theme: /
                 $session.people = new Set();
             }
             var coord = 1;
-            while ($session.people.has(coord) === true) {
-                coord = $jsapi.random(100);
-            }
+
             $session.people.add(coord)
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify($session.people)
+                text: JSON.stringify(typeof $session.people)
             });
             $response.replies.push({
               type: 'image',
