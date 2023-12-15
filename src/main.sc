@@ -8,7 +8,7 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Start
-        intent!: /SearchIntent
+        intent!: /SearchIntent || toState = Matched
         script:
             $smartProfile.getProfileData();
             log(123);
@@ -18,7 +18,6 @@ theme: /
               imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
         a: Вот ваш кот. Видели этого человека?
-        go!: Matched
 
         state: Matched
             state: Yes
