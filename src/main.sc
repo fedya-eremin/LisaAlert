@@ -31,7 +31,7 @@ theme: /
             log($session)
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify(getProperties($session.people))
+                text: JSON.stringify($session.people)
             });
             $session.people.push("123")
             $jsapi.log(123);
