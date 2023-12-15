@@ -7,7 +7,8 @@ theme: /
         go!: /Prepare
         
     state: Prepare
-        eg: start
+        q: *
+        intent: /SearchIntent
         go!: /Start
 
     state: Start || modal = true
