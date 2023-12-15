@@ -19,7 +19,7 @@ theme: /
 
     state: Start || modal = true
         script:
-            $session.people = [];
+            $session.people = [2];
             $response.replies = $response.replies || [];
             if ($session.people.length === 100) {
                 $session.people = [];
