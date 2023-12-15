@@ -30,7 +30,7 @@ theme: /
                 type: 'text',
                 text: JSON.stringify(getProperties($session.people))
             });
-            $session.people.push(coord)
+            $session.people.push("123")
             $jsapi.log(123);
             $response.replies.push({
               type: 'image',
