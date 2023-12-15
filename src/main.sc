@@ -22,7 +22,9 @@ theme: /
                 $session.people = [];
             }
             var coord = 1;
-
+            while ($session.people.find(coord)) {
+                coord = 1;
+            }
             $session.people.push(coord)
             $jsapi.log(123);
             $response.replies = $response.replies || [];
