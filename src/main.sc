@@ -2,44 +2,22 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-    state: Приветствие
-        q!: $regex</start>
-        intent!: /привет || toState=/Prepare
-        a: Здравствуйте! Это - навык Лиза Алерт
-        
-    state: Prepare
-        intent: /SearchIntent
-        go!: /Start
-        
-    state: Start
-        script:
-            $smartProfile.getProfileData();
-            log(123);
-            $response.replies = [];
-            $response.replies.push({
-              type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
-            });
-        a: Вот ваш кот. Видели этого человека?
+    state: FlightNumber || modal = true
+        q!: * (когда|прибывает*) * ~рейс *
+        a: Здравствуйте! Какой у вас номер рейса?
 
-        state: Matched
-            eg: matched
-            a: ok
-            go!: /Start
-        
-            # TODO сделать это нормально
-                
-    state: AskContinue
-        a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше!
-        go: /Start
-        state: Matched
-            state: Yes
-                eg!: matched
-                go!: /Start
+        state: GetNumber
+            q: * $Number *
+            a: Ожидается прибытие рейса
+            go!: /WhatElse
 
-            state: No
-                q: * нет *
-                a: Жаль...
-                go: /Start
-        
-        
+        state: LocalCatchAll
+            event: noMatch
+            a: Это не похоже на номер рейса. Попробуйте еще раз.
+
+    state: WhatElse
+        a: Чем еще я могу помочь?
+
+    state: City
+        q: * $City *
+        a: Вас интересуют рейсы из города {{ $parseTree._City }}?
