@@ -24,23 +24,14 @@ theme: /
             state: Yes
                 eg!: matched
                 a: Хорошо. Сообщю, что Вы видели этого человека
-                go!: /Start
+                go: /Start
 
             state: No
                 q: * нет *
                 a: Жаль...
-            go: /Start
+                go: /Start
             # TODO сделать это нормально
                 
     state: AskContinue
         a: Дальше?
         go!: /Start
-    
-
-    
-    state: GetPromoCode
-        q!: хочу получить промокод
-        script:
-            $session.codes = ["XeZ4","o09E","sadL"];
-            $jsapi.log("Осталось промокодов: " + $session.codes.length);
-        a: Твой промокод: {{ $session.codes.splice(0,1) }}
