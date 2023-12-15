@@ -11,7 +11,7 @@ theme: /
         intent!: /SearchIntent
         go!: /Start
         
-    state: Start
+    state: Start || noContext = true
         script:
             $smartProfile.getProfileData();
             log(123);
