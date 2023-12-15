@@ -30,7 +30,7 @@ theme: /
             event: noMatch
             a: Не понимаю вас. Попробуйте еще раз, пожалуйста
             
-    state: ShowMore
+    state: ShowMore || modal = true
         a: Показать еще объявления?
         
         state: YesShowMore
