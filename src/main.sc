@@ -9,8 +9,7 @@ theme: /
         
     state: Prepare
         intent: /SearchIntent
-        go!: /Start
-        
+
     state: Start || modal = true
         script:
             $smartProfile.getProfileData();
