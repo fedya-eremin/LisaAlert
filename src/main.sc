@@ -22,7 +22,7 @@ theme: /
                 $session.people = [];
             }
             var coord = $jsapi.random(100);
-            while ($session.people.includes(coord)) {
+            while ($session.people.indexOf(coord)) {
                 coord = $jsapi.random(100);
             }
             $session.people.push(coord)
