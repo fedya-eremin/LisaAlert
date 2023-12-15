@@ -25,7 +25,7 @@ theme: /
         state: Seen
             eg: matched
             a: Хорошо. Сообщю, что Вы видели этого человека.
-            go: /ShowMore
+            go!: /ShowMore
             
         state: LocalCatchAll
             event: noMatch
