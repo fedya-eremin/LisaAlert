@@ -8,10 +8,10 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Prepare
-        intent!: /SearchIntent
+        intent: /SearchIntent
         go!: /Start
         
-    state: Start 
+    state: Start || modal = true
         script:
             $smartProfile.getProfileData();
             log(123);
@@ -23,7 +23,7 @@ theme: /
         a: Вот ваш кот. Видели этого человека?
 
         state: Matched
-            eg!: matched
+            eg: matched
             a: ok
             go: /Start
         
