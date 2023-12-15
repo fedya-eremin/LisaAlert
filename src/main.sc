@@ -24,7 +24,6 @@ theme: /
 
         state: Matched
             state: Yes
-                a: ok
                 eg!: matched
                 go!: /Start
 
