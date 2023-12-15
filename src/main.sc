@@ -3,13 +3,12 @@ require: slotfilling/slotFilling.sc
 
 theme: /
     state: Приветствие
-        q!: *
-        intent!: /привет
         a: Здравствуйте! Это - навык Лиза Алерт!
         go!: /Prepare
         
     state: Prepare
         intent: /SearchIntent
+        
 
     state: Start || modal = true
         script:
