@@ -46,3 +46,4 @@ theme: /
             event: noMatch
             intent: /пока || toState = /Greeting
             a: Хорошо, до свидания!
+            go!: /
