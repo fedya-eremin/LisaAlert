@@ -20,6 +20,7 @@ theme: /
     state: Start || modal = true
         script:
             $session.people = $session.people || [];
+            $response.replies = $response.replies || [];
             if ($session.people.length === 100) {
                 $session.people = [];
             }
@@ -31,7 +32,6 @@ theme: /
             });
             $session.people.push(coord)
             $jsapi.log(123);
-            $response.replies = $response.replies || [];
             $response.replies.push({
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + coord
