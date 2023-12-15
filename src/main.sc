@@ -18,19 +18,20 @@ theme: /
               imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
             });
         a: Вот ваш кот. Видели этого человека?
+        go!: /AskContinueYes
 
+            # TODO сделать это нормально
+                
+    state: AskContinueYes
+        a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше?
         state: Matched
             state: Yes
                 eg!: matched
-                a: Хорошо. Сообщю, что Вы видели этого человека
-                go!: /AskContinue
+                go!: /Start
 
             state: No
                 q: * нет *
                 a: Жаль...
                 go: /Start
-            # TODO сделать это нормально
-                
-    state: AskContinue
-        a: Дальше?
-        go!: /Start
+        
+        
