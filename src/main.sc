@@ -11,5 +11,3 @@ theme: /
         q: *
         intent: /SearchIntent
         a: Давайте посмотрим!
-        go!: /Start
-
