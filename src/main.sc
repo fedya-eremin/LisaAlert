@@ -21,9 +21,9 @@ theme: /
             if ($session.people.length === 100) {
                 $session.people = [];
             }
-            var coord = $jsapi.random(100);
+            var coord = 1;
             while ($session.people.indexOf(coord)) {
-                coord = $jsapi.random(100);
+                coord = 1;
             }
             $session.people.push(coord)
             $jsapi.log(123);
