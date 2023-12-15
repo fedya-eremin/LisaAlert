@@ -2,13 +2,14 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
 theme: /
-    state: Приветствие
-        q!: $regex</start>
+    state: Приветствие || noContext = true
+        q!: *
         intent!: /привет || toState=/Prepare
         a: Здравствуйте! Это - навык Лиза Алерт
         
     state: Prepare
         intent: /SearchIntent
+        go: /Start
 
     state: Start || modal = true
         script:
