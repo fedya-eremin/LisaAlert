@@ -17,11 +17,20 @@ theme: /
 
     state: Start || modal = true
         script:
+            $session.people = $session.people || [];
+            if ($session.people.length === 100) {
+                $session.people = [];
+            }
+            var coord = $jsapi.random(100);
+            while ($session.people.includes(coord)) {
+                coord = $jsapi.random(100);
+            }
+            $session.people.push(coord)
             $jsapi.log(123);
             $response.replies = $response.replies || [];
             $response.replies.push({
               type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello' 
+              imageUrl: 'https://cataas.com/cat/says/Hello' + coord
             });
         a: Вот ваш кот. Видели этого человека?
 
