@@ -1,6 +1,8 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
+require: util.js
+
 theme: /
     state: Greeting
         q!: $regex</start>
@@ -22,7 +24,7 @@ theme: /
                 $session.people = [];
             }
             var coord = 1;
-            $response.replies.push(Object.keys($session.people));
+            $response.replies.push(getProperties($session.people));
             $session.people.push(coord)
             $jsapi.log(123);
             $response.replies = $response.replies || [];
