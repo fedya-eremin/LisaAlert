@@ -27,9 +27,6 @@ theme: /
             a: ok
             go: /Start
         
-        state: CatchNo
-            event: noMatch
-            a: Не понял вас.
             # TODO сделать это нормально
                 
     state: AskContinue
