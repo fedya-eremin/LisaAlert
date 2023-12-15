@@ -19,21 +19,20 @@ theme: /
 
     state: Start || modal = true
         script:
-            $session.people = $session.people || [];
+            $session.people = $session.people || new Set();
             $response.replies = $response.replies || [];
-            if ($session.people.length === 100) {
-                $session.people = [];
+            if ($session.people.size === 100) {
+                $session.people = new Set();
             }
             var coord = 1;
-            while ($session.people.indexOf(coord) !== -1) {
+            while ($session.people.has(coord) === true) {
                 coord = $jsapi.random(100);
             }
-            $session.people.push(coord)
+            $session.people.add(coord)
             $response.replies.push({
                 type: 'text',
                 text: JSON.stringify($session.people)
             });
-            $jsapi.log(123);
             $response.replies.push({
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + coord
