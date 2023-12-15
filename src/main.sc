@@ -25,7 +25,10 @@ theme: /
             }
             var coord = 1;
             log($session)
-            $response.replies.push(JSON.stringify($session.people));
+            $response.replies.push(
+                type: 'text',
+                text: JSON.stringify(getProperties($session.people))
+            });
             $session.people.push(coord)
             $jsapi.log(123);
             $response.replies = $response.replies || [];
