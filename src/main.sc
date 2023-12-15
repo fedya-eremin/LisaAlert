@@ -27,10 +27,7 @@ theme: /
             eg: matched
             a: Хорошо. Сообщю, что Вы видели этого человека.
             go!: /ShowMore
-            
-        state: LocalCatchAll
-            event: noMatch
-            a: Не понимаю вас. Попробуйте еще раз, пожалуйста
+
             
     state: ShowMore || modal = true
         a: Показать еще объявления?
