@@ -12,11 +12,9 @@ theme: /
         go!: /Start
 
     state: Start || modal = true
-        q: *
         script:
-            $smartProfile.getProfileData();
             $jsapi.log(123);
-            $response.replies = [];
+            $response.replies = $response.replies || [];
             $response.replies.push({
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' 
@@ -27,7 +25,10 @@ theme: /
             eg: matched
             a: Хорошо. Сообщю, что Вы видели этого человека.
             go!: /ShowMore
-
+            
+        state: LocalCatchAll
+            event: noMatch
+            a: Не понимаю вас. Попробуйте еще раз, пожалуйста
             
     state: ShowMore || modal = true
         a: Показать еще объявления?
