@@ -14,7 +14,7 @@ theme: /
     state: Start || modal = true
         script:
             $smartProfile.getProfileData();
-            $jsapi.log("123");
+            log(123);
             $response.replies = [];
             $response.replies.push({
               type: 'image',
