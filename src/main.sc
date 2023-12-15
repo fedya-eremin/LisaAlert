@@ -4,8 +4,7 @@ require: slotfilling/slotFilling.sc
 theme: /
     state: Приветствие
         a: Здравствуйте! Это - навык Лиза Алерт!
-        go!: /Prepare
-        
+
     state: Prepare
         intent: /SearchIntent
 
