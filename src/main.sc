@@ -23,13 +23,13 @@ theme: /
         a: Вот ваш кот. Видели этого человека?
 
         state: Matched
-            state: Yes
-                eg!: matched
-                go!: /Start
-
-            state: No
-                q: * нет *
-                go: /Start
+            eg!: matched
+            a: ok
+            go: /Start
+        
+        state: CatchNo
+            event: noMatch
+            a: Не понял вас.
             # TODO сделать это нормально
                 
     state: AskContinue
