@@ -25,7 +25,7 @@ theme: /
         state: Matched
             eg: matched
             a: ok
-            go: /Start
+            go!: /Start
         
             # TODO сделать это нормально
                 
