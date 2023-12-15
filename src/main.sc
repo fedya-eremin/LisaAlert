@@ -41,5 +41,3 @@ theme: /
         state: LocalCatchAll
             event: noMatch
             a: Хорошо, до свидания!
-            go!: /Приветствие
-        
