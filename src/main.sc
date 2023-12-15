@@ -14,7 +14,7 @@ theme: /
     state: Start || modal = true
         script:
             $smartProfile.getProfileData();
-            log(123);
+            $jsapi.log(123);
             $response.replies = [];
             $response.replies.push({
               type: 'image',
@@ -24,9 +24,21 @@ theme: /
 
         state: Matched
             eg: matched
-            a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше!
-            go!: /Start
+            a: Хорошо. Сообщю, что Вы видели этого человека.
+            go!: /ShowMore
             
         state: LocalCatchAll
             event: noMatch
             a: Не понимаю вас. Попробуйте еще раз, пожалуйста
+            
+    state: ShowMore
+        a: Показать еще объявления?
+        
+        state: YesShowMore
+            q: да
+            go!: /Start
+        
+        state: LocalCatchAll
+            event: noMatch
+            a: Хорошо, до свидания!
+        
