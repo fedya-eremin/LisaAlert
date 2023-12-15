@@ -26,12 +26,12 @@ theme: /
 
             state: No
                 q: * нет *
-                a: Жаль...
                 go: /Start
             # TODO сделать это нормально
                 
     state: AskContinue
         a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше?
+        go!: Matched
         state: Matched
             state: Yes
                 eg!: matched
