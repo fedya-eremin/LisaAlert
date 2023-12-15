@@ -19,11 +19,11 @@ theme: /
             $response.replies = [];
             $response.replies.push({
               type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello' + $jsapi.random(100)
+              imageUrl: 'https://cataas.com/cat/says/Hello' #+ $jsapi.random(100)
             });
         a: Вот ваш кот. Видели этого человека?
 
-        state: Matched
+        state: Seen
             eg: matched
             a: Хорошо. Сообщю, что Вы видели этого человека.
             go!: /ShowMore
