@@ -4,11 +4,14 @@ require: slotfilling/slotFilling.sc
 theme: /
     state: Приветствие
         q!: $regex</start>
-        intent!: /привет || toState=/Start
+        intent!: /привет || toState=/Prepare
         a: Здравствуйте! Это - навык Лиза Алерт
         
+    state: Prepare
+        intent!: /SearchIntent
+        go!: /Start
+        
     state: Start
-        intent!: /SearchIntent 
         script:
             $smartProfile.getProfileData();
             log(123);
