@@ -34,7 +34,7 @@ theme: /
                 
     state: AskContinue
         a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше!
-        go!: /Start
+        go: /Start
         state: Matched
             state: Yes
                 eg!: matched
