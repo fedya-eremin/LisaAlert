@@ -8,7 +8,9 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт!
 
     state: Prepare
+        q: *
         intent: /SearchIntent
+        a: Давайте посмотрим!
         go!: /Start
 
     state: Start || modal = true
