@@ -33,8 +33,8 @@ theme: /
             # TODO сделать это нормально
                 
     state: AskContinue
-        a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше?
-        go!: Matched
+        a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше!
+        go!: /Start
         state: Matched
             state: Yes
                 eg!: matched
