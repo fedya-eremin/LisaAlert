@@ -2,7 +2,7 @@
     "classes": [
         {
             "id": "start",
-            "path": "/SStart",
+            "path": "/Start",
             "description": "Фразы для инициации диалога",
             "disabled": false,
             "phrases": [
