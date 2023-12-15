@@ -7,7 +7,7 @@ theme: /
         a: Здравствуйте! Какой у вас номер рейса?
 
         state: GetNumber
-            q: * $Number *
+            q: * сто *
             a: Ожидается прибытие рейса
             go!: /WhatElse
 
