@@ -8,6 +8,5 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт!
 
     state: Prepare
-        q: *
         intent: /SearchIntent
         a: Давайте посмотрим!
