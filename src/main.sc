@@ -12,9 +12,10 @@ theme: /
         go!: /Start
         
     state: Start || modal = true
+        q: *
         script:
             $smartProfile.getProfileData();
-            log(123);
+            $jsapi.log("123");
             $response.replies = [];
             $response.replies.push({
               type: 'image',
