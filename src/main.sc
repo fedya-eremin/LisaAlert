@@ -20,6 +20,15 @@ theme: /
         a: Вот ваш кот. Видели этого человека?
         go!: /AskContinueYes
 
+        state: Matched
+            state: Yes
+                eg!: matched
+                go!: /AskContinue
+
+            state: No
+                q: * нет *
+                a: Жаль...
+                go: /Start
             # TODO сделать это нормально
                 
     state: AskContinueYes
