@@ -24,11 +24,11 @@ theme: /
             state: Yes
                 eg!: matched
                 a: Хорошо. Сообщю, что Вы видели этого человека
-                go!: /Start  
+                go: /Start  
             state: No
                 q: * нет *
                 a: Жаль...
-                go!: /Start 
+                go: /Start 
             # TODO сделать это нормально
                 
     state: AskContinue
