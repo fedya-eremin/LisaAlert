@@ -32,7 +32,7 @@ theme: /
                 
     state: AskContinue
         a: Дальше?
-        go!: Continue
+        go!: /Start
     
 
     
