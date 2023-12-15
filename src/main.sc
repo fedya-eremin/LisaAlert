@@ -26,7 +26,7 @@ theme: /
             }
             var coord = 1;
             while ($session.people.indexOf(coord) === -1) {
-                coord = 52
+                coord = 52;
             }
             $response.replies.push({
                 type: 'text',
