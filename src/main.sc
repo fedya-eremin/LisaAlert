@@ -23,7 +23,7 @@ theme: /
             state: Yes
                 eg!: matched
                 a: Хорошо. Сообщю, что Вы видели этого человека
-                go!: /Start
+                go!: /AskContinue
 
             state: No
                 q: * нет *
