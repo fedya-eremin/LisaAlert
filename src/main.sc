@@ -10,3 +10,16 @@ theme: /
     state: Prepare
         intent: /SearchIntent
         a: Давайте посмотрим!
+        go!: /Start
+
+    state: Start || modal = true
+        script:
+            $jsapi.log(123);
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+              type: 'image',
+              imageUrl: 'https://cataas.com/cat/says/Hello' 
+            });
+        a: Вот ваш кот. Видели этого человека?
+
+ 
