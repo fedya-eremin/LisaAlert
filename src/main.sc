@@ -24,6 +24,7 @@ theme: /
                 $session.people = [];
             }
             var coord = 1;
+            log($session)
             $response.replies.push(getProperties($session.people));
             $session.people.push(coord)
             $jsapi.log(123);
