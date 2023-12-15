@@ -7,6 +7,7 @@ theme: /
         go!: /Prepare
         
     state: Prepare
+        q: *
         intent: /SearchIntent
         go!: /Start
 
