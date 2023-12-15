@@ -30,7 +30,7 @@ theme: /
             }
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify($session.people.indexOf(coord))
+                text: JSON.stringify(coord)
             });
             $session.people.push(coord)
             $jsapi.log(123);
