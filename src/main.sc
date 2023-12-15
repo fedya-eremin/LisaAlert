@@ -30,7 +30,7 @@ theme: /
                 go: /Start
             # TODO сделать это нормально
                 
-    state: AskContinueYes
+    state: AskContinue
         a: Хорошо. Сообщю, что Вы видели этого человека. Идём дальше?
         state: Matched
             state: Yes
