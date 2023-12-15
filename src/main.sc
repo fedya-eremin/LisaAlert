@@ -11,7 +11,7 @@ theme: /
         intent!: /SearchIntent
         go!: /Start
         
-    state: Start || noContext = true
+    state: Start || modal = true
         script:
             $smartProfile.getProfileData();
             log(123);
@@ -24,8 +24,9 @@ theme: /
 
         state: Matched
             state: Yes
+                a: ok
                 eg!: matched
-                go!: /AskContinue
+                go!: /Start
 
             state: No
                 q: * нет *
