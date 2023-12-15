@@ -19,13 +19,13 @@ theme: /
 
     state: Start || modal = true
         script:
-            $session.people = [2];
+            $session.people = [1, 2];
             $response.replies = $response.replies || [];
             if ($session.people.length === 100) {
                 $session.people = [];
             }
             var coord = 1;
-            while ($session.people.indexOf(coord) === -1) {
+            while ($session.people.indexOf(coord) !== -1) {
                 var coord = 3;
             }
             $response.replies.push({
