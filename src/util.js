@@ -1,3 +1,3 @@
 function getProperties(obj) {
-    return Object.keys(obj)
+    return obj.indexOf(0)
 }
