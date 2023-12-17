@@ -19,14 +19,14 @@ theme: /
 
     state: Start || modal = true
         script:
-            $session.people = $session.people || new Set();
+            $session.people = $session.people || [];
             $response.replies = $response.replies || [];
-            if ($session.people.size === 100) {
-                $session.people = new Set();
+            if ($session.people.length === 100) {
+                $session.people = [];
             }
             var coord = 1;
 
-            $session.people.add(coord)
+            $session.people.push(coord)
             $response.replies.push({
                 type: 'text',
                 text: JSON.stringify(typeof $session.people)
