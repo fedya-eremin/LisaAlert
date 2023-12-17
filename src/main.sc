@@ -26,7 +26,7 @@ theme: /
             }
             $response.replies.push({
               type: 'text',
-              text: $session.people[0]
+              text: $session.people
             });
         a: Видели этого человека?
 
