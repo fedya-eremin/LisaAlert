@@ -31,7 +31,7 @@ theme: /
                     type: 'text',
                     text: state.toString()
                 })
-                $session.people = JSON.parse($http.get(url).data);
+                $session.people = newPeople;
                 //$client.lastRequest = $session.people;
             }
             $response.replies.push({
