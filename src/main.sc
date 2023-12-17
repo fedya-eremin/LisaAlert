@@ -25,19 +25,12 @@ theme: /
                 $session.people = [];
             }
             var coord = 1;
-
+            $temp.m = $http.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444")
             $session.people.push(coord)
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify(typeof $session.people)
+                text: JSON.stringify($temp.m)
             });
-            $fetch.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444")
-                .then(function (res) {
-                    $response.replies.push({
-                        type: 'text',
-                        text: "123"
-                    })
-                })
             $response.replies.push({
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + coord
