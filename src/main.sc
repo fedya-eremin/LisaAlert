@@ -46,8 +46,8 @@ theme: /
                 //$client.lastRequest = $session.people;
             }
             $response.replies.push({
-              type: 'text',
-              text: JSON.stringify($session.people.splice(0, 1)[0])
+              type: 'image',
+              imageUrl: $session.people.splice(0, 1)[0]
             });
         if: $session.notUpdated
             a: Пока новых пропавших без вести людей рядом с вами нет. Заходите позже!
