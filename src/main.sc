@@ -35,13 +35,17 @@ theme: /
                         $response.replies.push({
                             type: 'text',
                             text: a[i] + '\n' + b[i]
-                        })
+                        });
                     }
                 }
                 if ($session.notUpdated) {
                     return;
                 }
                 $client.lastQuery = newPeople;
+                $response.replies.push({
+                    type: 'text',
+                    text: 'lastQuery updated with ' + $client.lastQuery.length
+                });
                 $session.people = newPeople;
                 //$client.lastRequest = $session.people;
             }
