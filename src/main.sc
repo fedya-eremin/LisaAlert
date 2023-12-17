@@ -22,7 +22,7 @@ theme: /
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
             $session.people = $session.people ||  [];
             $response.replies = $response.replies || [];
-            if ($session.people.length === 0) {
+            if ($session.people.length) {
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
