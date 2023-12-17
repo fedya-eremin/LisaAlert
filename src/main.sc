@@ -27,7 +27,7 @@ theme: /
                 var state = newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join();
                 $response.replies.push({
                     type: 'text',
-                    text: JSON.stringify(newPeople)
+                    text: state.toString()
                 })
                 $session.people = JSON.parse($http.get(url).data);
                 //$client.lastRequest = $session.people;
