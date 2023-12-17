@@ -10,7 +10,7 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт!
         a: Вы можете помочь нам найти пропавших без вести людей.
         a: Вам будут показаны их ориентировки, после каждой вы сможете сообщить детали
-        a: Чтобы начать, скажите "Покажи пропавших людей"! {{ typeof $client.lastQuery }}
+        a: Чтобы начать, скажите "Покажи пропавших людей"! {{ $client.lastQuery }}
     # todo catchall
 
     state: Prepare
@@ -28,11 +28,16 @@ theme: /
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
-                $session.notUpdated = newPeople.slice(0).sort().join() == $client.lastQuery.slice(0).sort().join();
-                //$response.replies.push({
-                //    type: 'text',
-                //    text: $session.notUpdated.toString() + " " + $client.lastQuery + " " + newPeople
-                //})
+                var a = newPeople.slice(0).sort();
+                var b = $client.lastQuery.slice(0).sort();
+                for (var i = 0; i < 10; i++) {
+                    if (a[i] !== b[i]) {
+                        $response.replies.push({
+                            type: 'text',
+                            text: a[i] + '\n' + b[i]
+                        })
+                    }
+                }
                 if ($session.notUpdated) {
                     return;
                 }
