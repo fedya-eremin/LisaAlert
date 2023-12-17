@@ -11,6 +11,7 @@ theme: /
         a: Вы можете помочь нам найти пропавших без вести людей.
         a: Вам будут показаны их ориентировки, после каждой вы сможете сообщить детали
         a: Чтобы начать, скажите "Покажи пропавших людей"!
+    # todo catchall
 
     state: Prepare
         intent: /SearchIntent
@@ -30,7 +31,7 @@ theme: /
                 $session.notUpdated = newPeople.slice(0).sort().join() == $client.lastQuery.slice(0).sort().join();
                 $response.replies.push({
                     type: 'text',
-                    text: $session.notUpdated.toString()
+                    text: $session.notUpdated.toString() + " " + $client.lastQuery + " " + newPeople
                 })
                 if ($session.notUpdated) {
                     return;
