@@ -21,21 +21,14 @@ theme: /
         script:
             $session.people = $session.people || [];
             $response.replies = $response.replies || [];
-            if ($session.people.length === 100) {
-                $session.people = [];
+            if ($session.people === []) {
+                $session.people = $http.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444").data
             }
-            var coord = 1;
-            $temp.m = $http.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444")
-            $session.people.push(coord)
             $response.replies.push({
-                type: 'text',
-                text: JSON.stringify($temp.m.data)
+              type: 'text',
+              text: $session.people.splice(0, 1)[0]
             });
-            $response.replies.push({
-              type: 'image',
-              imageUrl: 'https://cataas.com/cat/says/Hello' + coord
-            });
-        a: Вот ваш кот. Видели этого человека?
+        a: Видели этого человека?
 
         state: Seen
             q: *
