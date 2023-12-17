@@ -24,7 +24,7 @@ theme: /
             $response.replies = $response.replies || [];
             if ($session.people.length === 0) {
                 var newPeople = JSON.parse($http.get(url).data);
-                var state = newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join());
+                var state = newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join();
                 $response.replise.push({
                     type: 'text',
                     text: state.toString()
