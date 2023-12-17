@@ -24,7 +24,7 @@ theme: /
             $session.people = $session.people || [];
             $client.lastQuery = $client.lastQuery || [];
             $response.replies = $response.replies || [];
-            if ($session.people.length === 0) {
+            if ($session.people.length) {
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
@@ -37,7 +37,7 @@ theme: /
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: JSON.stringify(newPeople.slice().sort()).length + JSON.stringify($client.lastQuery.slice().sort())
+                    text: JSON.stringify(newPeople.slice().sort()).length + JSON.stringify($client.lastQuery.slice().sort().length)
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
