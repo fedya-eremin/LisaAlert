@@ -26,7 +26,7 @@ theme: /
             }
             $response.replies.push({
               type: 'text',
-              text: JSON.stringify($session.people[0])
+              text: JSON.stringify($session.people.splice(0, 1)[0].photo_url)
             });
         a: Видели этого человека?
 
