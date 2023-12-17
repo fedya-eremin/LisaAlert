@@ -20,10 +20,16 @@ theme: /
     state: Start || modal = true
         script:
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
-            $session.people = $session.people || [];
+            $session.people = [];
             $response.replies = $response.replies || [];
             if ($session.people.length === 0) {
+                var newPeople = JSON.parse($http.get(url).data);
+                $response.replise.push({
+                    type: 'text',
+                    text: newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join())
+                })
                 $session.people = JSON.parse($http.get(url).data);
+                //$client.lastRequest = $session.people;
             }
             $response.replies.push({
               type: 'image',
