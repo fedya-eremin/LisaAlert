@@ -10,7 +10,7 @@ theme: /
         a: Здравствуйте! Это - навык Лиза Алерт!
         a: Вы можете помочь нам найти пропавших без вести людей.
         a: Вам будут показаны их ориентировки, после каждой вы сможете сообщить детали
-        a: Чтобы начать, скажите "Покажи пропавших людей"! {{ $client.lastQuery }}
+        a: Чтобы начать, скажите "Покажи пропавших людей"!
     # todo catchall
 
     state: Prepare
@@ -37,7 +37,7 @@ theme: /
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: JSON.stringify(newPeople.slice().sort()).length + " " + JSON.stringify($client.lastQuery.slice().sort().length)
+                    text: JSON.stringify(newPeople.slice().sort()).length + " " + JSON.stringify($client.lastQuery.slice().sort()).length
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
