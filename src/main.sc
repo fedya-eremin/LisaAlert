@@ -24,9 +24,10 @@ theme: /
             if ($session.people === []) {
                 $session.people = $http.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444").data
             }
+            $session.people.splice(0, 1)
             $response.replies.push({
               type: 'text',
-              text: $session.people.splice(0, 1)[0]
+              text: JSON.stringify($session.people)
             });
         a: Видели этого человека?
 
