@@ -35,7 +35,7 @@ theme: /
                 .then(function (res) {
                     $response.replies.push({
                         type: 'text',
-                        text: res[0].photo_url
+                        text: "123"
                     })
                 })
             $response.replies.push({
