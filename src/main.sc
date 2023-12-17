@@ -20,7 +20,7 @@ theme: /
     state: Start || modal = true
         script:
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
-            $session.people = [];
+            $session.people = $session.people ||  [];
             $response.replies = $response.replies || [];
             if ($session.people.length === 0) {
                 var newPeople = JSON.parse($http.get(url).data);
