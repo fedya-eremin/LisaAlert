@@ -41,12 +41,12 @@ theme: /
                 if ($session.notUpdated) {
                     return;
                 }
-                $client.lastQuery = newPeople;
+                $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
                     text: '' + $client.lastQuery.length + ' ' + newPeople.length
                 });
-                $session.people = newPeople;
+                $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
             }
             $response.replies.push({
@@ -67,6 +67,7 @@ theme: /
         
         state: NotSeen
             q: * нет *
+            # todo catch also /start
             go!: /ShowMore
             
         state: LocalCatchAll
