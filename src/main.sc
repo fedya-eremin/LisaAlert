@@ -42,12 +42,11 @@ theme: /
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
-            } else {
-                $response.replies.push({
-                  type: 'image',
-                  imageUrl: $session.people.splice(0, 1)[0]
-                });
             }
+            $response.replies.push({
+              type: 'image',
+              imageUrl: $session.people.splice(0, 1)[0]
+            });
         if: $session.notUpdated
             a: Пока новых пропавших без вести людей рядом с вами нет. Заходите позже!
             go!: /ShowMore/LocalCatchAll
