@@ -44,7 +44,7 @@ theme: /
                 $client.lastQuery = newPeople;
                 $response.replies.push({
                     type: 'text',
-                    text: 'lastQuery updated with ' + $client.lastQuery.length
+                    text: '' + $client.lastQuery.length + ' ' + newPeople.length
                 });
                 $session.people = newPeople;
                 //$client.lastRequest = $session.people;
