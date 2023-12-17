@@ -30,7 +30,7 @@ theme: /
                 $session.notUpdated = newPeople.slice(0).sort().join() == $client.lastQuery.slice(0).sort().join();
                 $response.replies.push({
                     type: 'text',
-                    text: notUpdated.toString()
+                    text: $session.notUpdated.toString()
                 })
                 if ($session.notUpdated) {
                     return;
