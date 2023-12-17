@@ -37,7 +37,7 @@ theme: /
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: (JSON.stringify(newPeople.slice().sort()) === JSON.stringify($client.lastQuery.slice().sort()).toString()
+                    text: JSON.stringify(newPeople.slice().sort()).length + JSON.stringify($client.lastQuery.slice().sort()
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
