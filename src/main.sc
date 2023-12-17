@@ -20,16 +20,22 @@ theme: /
     state: Start || modal = true
         script:
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
-            $session.people = $session.people ||  [];
+            $session.people = $session.people || [];
+            $client.lastQuery = $client.lastQuery || [];
             $response.replies = $response.replies || [];
-            if ($session.people.length) {
+            if ($session.people.length === 0) {
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
+                $session.notUpdated = newPeople.slice(0).sort().join() == $client.lastQuery.slice(0).sort().join();
                 $response.replies.push({
                     type: 'text',
-                    text: $context.currentState
+                    text: notUpdated.toString()
                 })
+                if ($session.notUpdated) {
+                    return;
+                }
+                $client.lastQuery = newPeople;
                 $session.people = newPeople;
                 //$client.lastRequest = $session.people;
             }
@@ -37,9 +43,10 @@ theme: /
               type: 'text',
               text: JSON.stringify($session.people.splice(0, 1)[0])
             });
-        if: true
+        if: $session.notUpdated
+            a: Пока новых пропавших без вести людей рядом с вами нет. Заходите позже!
             go!: /ShowMore/LocalCatchAll
-        a: Видели этого человека?
+        a: Вы видели этого человека?
 
         state: Seen
             q: *
