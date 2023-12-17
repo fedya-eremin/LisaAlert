@@ -28,8 +28,8 @@ theme: /
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
-                var a = newPeople.slice(0).sort();
-                var b = $client.lastQuery.slice(0).sort();
+                $session.notUpdated = 
+                    JSON.stringify(newPeople.slice().sort()) === JSON.stringify($client.lastQuery.slice().sort());
                 
                 if ($session.notUpdated) {
                     return;
@@ -37,7 +37,7 @@ theme: /
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: JSON.stringify(newPeople.slice().sort()) === JSON.stringify($client.lastQuery.slice().sort())
+                    text: $session.notUpdated.toString();
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
