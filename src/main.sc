@@ -29,10 +29,10 @@ theme: /
                     return e.photo_url;
                 });
                 $session.notUpdated = newPeople.slice(0).sort().join() == $client.lastQuery.slice(0).sort().join();
-                $response.replies.push({
-                    type: 'text',
-                    text: $session.notUpdated.toString() + " " + $client.lastQuery + " " + newPeople
-                })
+                //$response.replies.push({
+                //    type: 'text',
+                //    text: $session.notUpdated.toString() + " " + $client.lastQuery + " " + newPeople
+                //})
                 if ($session.notUpdated) {
                     return;
                 }
