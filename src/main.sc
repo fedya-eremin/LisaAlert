@@ -35,8 +35,8 @@ theme: /
                 //$client.lastRequest = $session.people;
             }
             $response.replies.push({
-              type: 'image',
-              imageUrl: $session.people.splice(0, 1)[0]
+              type: 'text',
+              text: JSON.stringify($session.people.splice(0, 1)[0])
             });
         a: Видели этого человека?
 
