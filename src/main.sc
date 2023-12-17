@@ -26,12 +26,10 @@ theme: /
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
-                if (newPeople.slice(0).sort().join() == newPeople.slice(0).sort().join()) {
-                    $context.currentState = "/ShowMore"
-                }
+
                 $response.replies.push({
                     type: 'text',
-                    text: state.toString()
+                    text: $context.currentState
                 })
                 $session.people = newPeople;
                 //$client.lastRequest = $session.people;
