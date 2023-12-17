@@ -24,6 +24,7 @@ theme: /
             $session.people = $session.people || [];
             $client.lastQuery = $client.lastQuery || [];
             $response.replies = $response.replies || [];
+            $session.notUpdated = false;
             if ($session.people.length === 0) {
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
