@@ -26,7 +26,6 @@ theme: /
                 var newPeople = JSON.parse($http.get(url).data).map(function(e) {
                     return e.photo_url;
                 });
-
                 $response.replies.push({
                     type: 'text',
                     text: $context.currentState
@@ -38,6 +37,8 @@ theme: /
               type: 'text',
               text: JSON.stringify($session.people.splice(0, 1)[0])
             });
+        if: true
+            go!: /ShowMore/LocalCatchAll
         a: Видели этого человека?
 
         state: Seen
@@ -65,5 +66,5 @@ theme: /
         state: LocalCatchAll
             event: noMatch
             intent: /пока || toState = /Greeting
-            a: Хорошо, до свидания!
+            a: До новых встреч!
             go!: /
