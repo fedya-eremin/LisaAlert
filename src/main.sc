@@ -30,21 +30,14 @@ theme: /
                 });
                 var a = newPeople.slice(0).sort();
                 var b = $client.lastQuery.slice(0).sort();
-                for (var i = 0; i < 10; i++) {
-                    if (a[i] !== b[i]) {
-                        $response.replies.push({
-                            type: 'text',
-                            text: a[i] + '\n' + b[i]
-                        });
-                    }
-                }
+                
                 if ($session.notUpdated) {
                     return;
                 }
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: ($client.lastQuery.length === newPeople.length).toString()
+                    text: (JSON.stringify(newPeople.slice().sort()) === JSON.stringify($client.lastQuery.slice().sort()).toString()
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
