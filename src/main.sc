@@ -20,14 +20,14 @@ theme: /
     state: Start || modal = true
         script:
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
-            $session.people = [];
+            $session.people = $session.people || [];
             $response.replies = $response.replies || [];
             if ($session.people.length === 0) {
                 $session.people = JSON.parse($http.get(url).data);
             }
             $response.replies.push({
-              type: 'text',
-              text: $session.people.splice(0, 1)[0].photo_url
+              type: 'image',
+              imageUrl: $session.people.splice(0, 1)[0].photo_url
             });
         a: Видели этого человека?
 
