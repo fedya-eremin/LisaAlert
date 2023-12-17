@@ -29,7 +29,7 @@ theme: /
             $session.people.push(coord)
             $response.replies.push({
                 type: 'text',
-                text: JSON.stringify($temp.m)
+                text: JSON.stringify($temp.m.data)
             });
             $response.replies.push({
               type: 'image',
