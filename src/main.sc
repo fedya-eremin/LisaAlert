@@ -26,7 +26,7 @@ theme: /
                 var newPeople = JSON.parse($http.get(url).data);
                 $response.replise.push({
                     type: 'text',
-                    text: newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join())
+                    text: JSON.srtingify(newPeople.slice(0).sort().join() == $session.people.slice(0).sort().join()))
                 })
                 $session.people = JSON.parse($http.get(url).data);
                 //$client.lastRequest = $session.people;
