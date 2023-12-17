@@ -31,6 +31,13 @@ theme: /
                 type: 'text',
                 text: JSON.stringify(typeof $session.people)
             });
+            $fetch.get("https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444")
+                .then(function (res) {
+                    $response.replies.push({
+                        type: 'text',
+                        text: res[0].photo_url
+                    })
+                })
             $response.replies.push({
               type: 'image',
               imageUrl: 'https://cataas.com/cat/says/Hello' + coord
