@@ -37,7 +37,7 @@ theme: /
                 $client.lastQuery = newPeople.slice(0);
                 $response.replies.push({
                     type: 'text',
-                    text: $session.notUpdated.toString();
+                    text: $session.notUpdated.toString()
                 });
                 $session.people = newPeople.slice(0);
                 //$client.lastRequest = $session.people;
