@@ -3,9 +3,6 @@ require: slotfilling/slotFilling.sc
 
 
 theme: /
-    init:
-        $smartProfile.getProfileData();
-
     state: Greeting
         q!: $regex</start>
         intent: /привет
@@ -25,6 +22,7 @@ theme: /
 
     state: Start || modal = true
         script:
+            $smartProfile.getProfileData();
             var lat = $request.data.eventData.profile_data.geo.location.lat;
             var lon = $request.data.eventData.profile_data.geo.location.lon;
             var url = "https://sber.skomarov.com/api/v1/locator/missing?latitude=43.404851&longitude=39.959444";
