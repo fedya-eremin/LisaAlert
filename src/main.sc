@@ -60,7 +60,7 @@ theme: /
             go!: /ShowMore
             
         state: Seen
-            q: * (да|вид*|кон*|вот*) *
+            q: (да|вид*|кон*|вот*)
             a: Хорошо. Сообщю, что Вы видели этого человека. [Отправка письма по SMTP]
             script:
                 $mail.sendMessage("henry_morgan06@mail.ru", "message subject", "message body");
@@ -74,7 +74,7 @@ theme: /
         a: Показать еще объявления?
         
         state: YesShowMore
-            q: * (да*|давай*|конечно*|еще*) *
+            q: (да*|давай*|конечно*|еще*)
             go!: /Start
         
         state: LocalCatchAll
