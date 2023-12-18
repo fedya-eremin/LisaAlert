@@ -1,7 +1,6 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 
-require: util.js
 
 theme: /
     state: Greeting
@@ -11,7 +10,10 @@ theme: /
         a: Вы можете помочь нам найти пропавших без вести людей.
         a: Вам будут показаны их ориентировки, после каждой вы сможете сообщить детали
         a: Чтобы начать, скажите "Покажи пропавших людей"!
-    # todo catchall
+    
+    state: CatchAll
+        event: noMatch
+        a: Извините, я вас не понимаю
 
     state: Prepare
         intent: /SearchIntent
@@ -60,7 +62,7 @@ theme: /
             go!: /ShowMore
         
         state: NotSeen
-            q: * нет *
+            eg: notmatched
             # todo catch also /start
             go!: /ShowMore
             
