@@ -74,7 +74,7 @@ theme: /
         a: Показать еще объявления?
         
         state: YesShowMore
-            q: да
+            q: * (да*|давай*|конечно*|еще*) *
             go!: /Start
         
         state: LocalCatchAll
