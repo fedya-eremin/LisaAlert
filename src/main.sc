@@ -43,7 +43,6 @@ theme: /
                     text: $session.notUpdated.toString()
                 });
                 $session.people = newPeople.slice(0);
-                //$client.lastRequest = $session.people;
             }
             $response.replies.push({
               type: 'image',
@@ -56,14 +55,13 @@ theme: /
 
         state: Seen
             q: *
-            a: Хорошо. Сообщю, что Вы видели этого человека. [{{ $request.query }}]
+            a: Хорошо. Сообщю, что Вы видели этого человека.
             script:
                 $mail.sendMessage("henry_morgan06@mail.ru", "message subject", "message body");
             go!: /ShowMore
         
         state: NotSeen
             eg: notmatched
-            # todo catch also /start
             go!: /ShowMore
             
         state: LocalCatchAll
