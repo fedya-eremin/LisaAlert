@@ -61,12 +61,7 @@ theme: /
             eg: notmatched
             go!: /ShowMore
             
-        state: Seen
-            q: *
-            a: Хорошо. Сообщю, что Вы видели этого человека. [Отправка письма по SMTP]
-            script:
-                $mail.sendMessage("henry_morgan06@mail.ru", "message subject", "message body");
-            go!: /ShowMore
+
             
         state: LocalCatchAll
             event: noMatch
