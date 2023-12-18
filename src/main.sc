@@ -3,9 +3,6 @@ require: slotfilling/slotFilling.sc
 
 
 theme: /
-    init:
-        $smartProfile.getProfileData();
-
     state: Greeting
         q!: $regex</start>
         intent: /привет
@@ -13,6 +10,9 @@ theme: /
         a: Вы можете помочь нам найти пропавших без вести людей.
         a: Вам будут показаны их ориентировки, после каждой вы сможете сообщить детали
         a: Чтобы начать, скажите "Покажи пропавших людей"!
+        script:
+            $smartProfile.getProfileData();
+
     
     state: CatchAll
         event: noMatch
