@@ -68,7 +68,7 @@ theme: /
             
         state: LocalCatchAll
             event: noMatch
-            a: Не понимаю вас. Попробуйте еще раз, пожалуйста
+            go!: /ShowMore/YesShowMore
             
     state: ShowMore || modal = true
         a: Показать еще объявления?
